@@ -1,0 +1,33 @@
+{
+	"name": "@martin-kolarik/eslint-config",
+	"description": "Shared eslint config",
+	"version": "1.0.0",
+	"github": "https://github.com/MartinKolarik/eslint-config/",
+	"peerDependencies": {
+		"eslint": "^5.1.0",
+		"eslint-plugin-chai-expect": "^1.1.1",
+		"eslint-plugin-html": "^4.0.5",
+		"eslint-plugin-node": "^6.0.1",
+		"eslint-plugin-promise": "^3.8.0"
+	},
+	"author": {
+		"name": "Martin Kolárik",
+		"email": "martin@kolarik.sk",
+		"url": "https://kolarik.sk"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MartinKolarik/eslint-config.git"
+	},
+	"bugs": {
+		"url": "https://github.com/MartinKolarik/eslint-config/issues"
+	},
+	"devDependencies": {
+		"eslint": "^5.1.0",
+		"eslint-plugin-chai-expect": "^1.1.1",
+		"eslint-plugin-html": "^4.0.5",
+		"eslint-plugin-node": "^6.0.1",
+		"eslint-plugin-promise": "^3.8.0"
+	}
+}
