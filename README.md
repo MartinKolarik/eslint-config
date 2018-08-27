@@ -5,7 +5,7 @@ Shared eslint config.
 ## Installation
 
 ```
-$ npm install @martin-kolarik/eslint-config
+$ npm install --save-dev @martin-kolarik/eslint-config
 ```
 
 ## Usage
