@@ -17,17 +17,17 @@
 		"url": "https://github.com/MartinKolarik/eslint-config/issues"
 	},
 	"peerDependencies": {
-		"eslint": "^5.16.0",
+		"eslint": "^6.0.1",
 		"eslint-plugin-chai-expect": "^2.0.1",
-		"eslint-plugin-html": "^5.0.5",
+		"eslint-plugin-html": "^6.0.0",
 		"eslint-plugin-node": "^9.1.0",
-		"eslint-plugin-promise": "^4.1.1"
+		"eslint-plugin-promise": "^4.2.1"
 	},
 	"devDependencies": {
-		"eslint": "^5.16.0",
+		"eslint": "^6.0.1",
 		"eslint-plugin-chai-expect": "^2.0.1",
-		"eslint-plugin-html": "^5.0.5",
+		"eslint-plugin-html": "^6.0.0",
 		"eslint-plugin-node": "^9.1.0",
-		"eslint-plugin-promise": "^4.1.1"
+		"eslint-plugin-promise": "^4.2.1"
 	}
 }

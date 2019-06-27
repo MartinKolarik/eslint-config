@@ -1,7 +1,7 @@
 module.exports = {
 	extends: 'eslint:recommended',
 	parserOptions: {
-		ecmaVersion: 2018,
+		ecmaVersion: 2019,
 		sourceType: 'module',
 	},
 	env: {
@@ -43,6 +43,9 @@ module.exports = {
 				nestedBinaryExpressions: false,
 				enforceForArrowConditionals: false,
 			},
+		],
+		'require-atomic-updates': [
+			'off',
 		],
 		'array-callback-return': [
 			'error',

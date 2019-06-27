@@ -44,6 +44,9 @@
 				"enforceForArrowConditionals": false
 			}
 		],
+		"require-atomic-updates": [
+			"off"
+		],
 		"array-callback-return": [
 			"error"
 		],
