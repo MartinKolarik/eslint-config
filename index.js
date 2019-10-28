@@ -147,7 +147,12 @@ module.exports = {
 		],
 		'comma-dangle': [
 			'error',
-			'always-multiline',
+			{
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'always-multiline',
+			},
 		],
 		'comma-spacing': [
 			'error',
