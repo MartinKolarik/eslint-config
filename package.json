@@ -2,6 +2,7 @@
 	"name": "@martin-kolarik/eslint-config",
 	"description": "Shared eslint config",
 	"version": "2.0.1",
+	"main": "./.eslintrc.js",
 	"github": "https://github.com/MartinKolarik/eslint-config/",
 	"author": {
 		"name": "Martin Kolárik",
