@@ -267,18 +267,38 @@ module.exports = {
 			'error',
 			{
 				blankLine: 'always',
+				prev: [ 'block-like' ],
+				next: '*',
+			},
+			{
+				blankLine: 'always',
+				prev: '*',
+				next: [ 'block-like' ],
+			},
+			{
+				blankLine: 'always',
+				prev: [ 'multiline-expression' ],
+				next: '*',
+			},
+			{
+				blankLine: 'always',
+				prev: '*',
+				next: [ 'multiline-expression' ],
+			},
+			{
+				blankLine: 'always',
 				prev: [ 'const', 'let' ],
 				next: '*',
 			},
 			{
 				blankLine: 'any',
 				prev: [ 'const', 'let' ],
-				next: [ 'const', 'let', 'expression', 'return' ],
+				next: [ 'expression' ],
 			},
 			{
-				blankLine: 'always',
-				prev: [ 'block-like' ],
-				next: '*',
+				blankLine: 'any',
+				prev: [ 'const', 'let' ],
+				next: [ 'const', 'let', 'return' ],
 			},
 		],
 		'quote-props': [
