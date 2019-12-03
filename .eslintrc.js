@@ -14,6 +14,7 @@ module.exports = {
 		'html',
 		'node',
 		'promise',
+		'prefer-let'
 	],
 	rules: {
 		'getter-return': [
@@ -433,6 +434,9 @@ module.exports = {
 		'promise/valid-params': [
 			'error',
 		],
+		'prefer-let/prefer-let': [
+			'error'
+		]
 	},
 	overrides: [
 		{
