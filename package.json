@@ -23,14 +23,14 @@
 		"eslint-plugin-html": "^6.0.2",
 		"eslint-plugin-node": "^11.1.0",
 		"eslint-plugin-prefer-let": "^1.0.2",
-		"eslint-plugin-promise": "^4.2.1"
+		"eslint-plugin-promise": "^5.1.0"
 	},
 	"devDependencies": {
-		"eslint": "^7.5.0",
+		"eslint": "^7.29.0",
 		"eslint-plugin-chai-expect": "^2.2.0",
-		"eslint-plugin-html": "^6.0.2",
+		"eslint-plugin-html": "^6.1.2",
 		"eslint-plugin-node": "^11.1.0",
-		"eslint-plugin-prefer-let": "^1.0.2",
-		"eslint-plugin-promise": "^4.2.1"
+		"eslint-plugin-prefer-let": "^1.1.0",
+		"eslint-plugin-promise": "^5.1.0"
 	}
 }
