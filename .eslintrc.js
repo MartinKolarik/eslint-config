@@ -459,6 +459,17 @@ module.exports = {
 				'chai-expect/terminating-properties': [
 					'error',
 				],
+				'no-restricted-properties': [
+					'error',
+					{
+						property: 'eq',
+						message: 'Please use .equal() instead.',
+					},
+					{
+						property: 'eql',
+						message: 'Please use .deep.equal() instead.',
+					},
+				],
 			},
 		},
 	],
