@@ -14,7 +14,7 @@ module.exports = {
 		'html',
 		'node',
 		'promise',
-		'prefer-let'
+		'prefer-let',
 	],
 	rules: {
 		'getter-return': [
@@ -139,7 +139,7 @@ module.exports = {
 		'brace-style': [
 			'error',
 			'1tbs',
-			{ allowSingleLine: true }
+			{ allowSingleLine: true },
 		],
 		'camelcase': [
 			'error',
@@ -435,8 +435,8 @@ module.exports = {
 			'error',
 		],
 		'prefer-let/prefer-let': [
-			'error'
-		]
+			'error',
+		],
 	},
 	overrides: [
 		{
