@@ -1,5 +1,6 @@
 module.exports = {
 	extends: 'eslint:recommended',
+	ignorePatterns: [ '!.*.js' ],
 	parserOptions: {
 		sourceType: 'module',
 	},
