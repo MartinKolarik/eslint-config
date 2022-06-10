@@ -11,7 +11,6 @@ module.exports = {
 		browser: true,
 	},
 	plugins: [
-		'html',
 		'node',
 		'promise',
 		'prefer-let',
