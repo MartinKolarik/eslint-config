@@ -1,17 +1,21 @@
 module.exports = {
-	extends: 'eslint:recommended',
+	extends: [
+		'eslint:recommended',
+		'plugin:jsonc/recommended-with-json',
+	],
 	ignorePatterns: [ '!.*.js' ],
 	parserOptions: {
 		sourceType: 'module',
 	},
 	env: {
-		es2021: true,
-		node: true,
-		mocha: true,
 		browser: true,
+		es2022: true,
+		mocha: true,
+		node: true,
 	},
 	plugins: [
 		'node',
+		'jsonc',
 		'promise',
 		'prefer-let',
 	],
@@ -404,6 +408,44 @@ module.exports = {
 			'error',
 		],
 		'yield-star-spacing': [
+			'error',
+		],
+		'jsonc/array-bracket-newline': [
+			'error',
+			{ minItems: 1 },
+		],
+		'jsonc/array-bracket-spacing': [
+			'error',
+			'always',
+			{
+				objectsInArrays: false,
+			},
+		],
+		'jsonc/array-element-newline': [
+			'error',
+		],
+		'jsonc/comma-style': [
+			'error',
+			'last',
+		],
+		'jsonc/indent': [
+			'error',
+			'tab',
+			{
+				SwitchCase: 1,
+			},
+		],
+		'jsonc/key-spacing': [
+			'error',
+		],
+		'jsonc/object-curly-newline': [
+			'error',
+		],
+		'jsonc/object-curly-spacing': [
+			'error',
+			'always',
+		],
+		'jsonc/object-property-newline': [
 			'error',
 		],
 		'node/no-extraneous-import': [
