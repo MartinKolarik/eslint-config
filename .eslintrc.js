@@ -386,6 +386,9 @@ module.exports = {
 		'no-var': [
 			'error',
 		],
+		'no-unused-private-class-members': [
+			'error',
+		],
 		'object-shorthand': [
 			'error',
 		],
@@ -393,6 +396,9 @@ module.exports = {
 			'error',
 		],
 		'prefer-numeric-literals': [
+			'error',
+		],
+		'prefer-object-has-own': [
 			'error',
 		],
 		'prefer-rest-params': [
