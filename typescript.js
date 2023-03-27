@@ -1,7 +1,17 @@
 module.exports = {
 	extends: [
 		'./.eslintrc.js',
-		'plugin:@typescript-eslint/recommended',
-		'./typescript-base.js',
+		'./typescript-base-js.js',
+	],
+	overrides: [
+		{
+			files: [
+				'*.ts',
+			],
+			extends: [
+				'plugin:@typescript-eslint/recommended',
+				'./typescript-base.js',
+			],
+		},
 	],
 };
