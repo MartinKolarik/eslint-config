@@ -1,6 +1,7 @@
 module.exports = {
 	extends: [
 		'./.eslintrc.js',
+		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'./typescript-base.js',
 	],
