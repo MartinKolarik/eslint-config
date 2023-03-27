@@ -1,7 +1,8 @@
 module.exports = {
 	extends: [
-		'./typescript.js',
+		'./.eslintrc.js',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
+		'./typescript-base.js',
 	],
 	rules: {
 		// Additional TS rules.
