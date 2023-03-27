@@ -102,6 +102,7 @@ module.exports = {
 			'error',
 			{
 				properties: 'never',
+				ignoreDestructuring: true,
 			},
 		],
 		'comma-dangle': [
