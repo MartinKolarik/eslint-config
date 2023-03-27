@@ -273,6 +273,10 @@ module.exports = {
 		'no-useless-rename': 'error',
 		'no-var': 'error',
 		'no-unused-private-class-members': 'error',
+		'no-unused-vars': [
+			'error',
+			{ ignoreRestSiblings: true }
+		],
 		'object-shorthand': 'error',
 		'prefer-arrow-callback': 'error',
 		'prefer-numeric-literals': 'error',
