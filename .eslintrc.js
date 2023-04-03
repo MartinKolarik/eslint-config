@@ -275,7 +275,7 @@ module.exports = {
 		'no-unused-private-class-members': 'error',
 		'no-unused-vars': [
 			'error',
-			{ ignoreRestSiblings: true }
+			{ ignoreRestSiblings: true },
 		],
 		'object-shorthand': 'error',
 		'prefer-arrow-callback': 'error',
@@ -330,6 +330,11 @@ module.exports = {
 		'prefer-let/prefer-let': 'error',
 	},
 	overrides: [
+		{
+			files: [
+				'*.cjs',
+			],
+		},
 		{
 			files: [
 				'test/**',
