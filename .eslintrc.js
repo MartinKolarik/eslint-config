@@ -3,7 +3,11 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:jsonc/recommended-with-json',
 	],
-	ignorePatterns: [ '!.*.js' ],
+	ignorePatterns: [
+		'!.*.cjs',
+		'!.*.js',
+		'!.*.json',
+	],
 	parserOptions: {
 		sourceType: 'module',
 	},
