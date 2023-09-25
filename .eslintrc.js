@@ -272,6 +272,10 @@ module.exports = {
 		'arrow-spacing': 'error',
 		'generator-star-spacing': 'error',
 		'no-duplicate-imports': 'error',
+		'no-empty-pattern': [
+			'error',
+			{ allowObjectPatternsAsParameters: true }
+		],
 		'no-useless-computed-key': 'error',
 		'no-useless-constructor': 'error',
 		'no-useless-rename': 'error',
