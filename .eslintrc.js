@@ -18,7 +18,7 @@ module.exports = {
 		node: true,
 	},
 	plugins: [
-		'node',
+		'n',
 		'jsonc',
 		'promise',
 		'prefer-let',
@@ -274,7 +274,7 @@ module.exports = {
 		'no-duplicate-imports': 'error',
 		'no-empty-pattern': [
 			'error',
-			{ allowObjectPatternsAsParameters: true }
+			{ allowObjectPatternsAsParameters: true },
 		],
 		'no-useless-computed-key': 'error',
 		'no-useless-constructor': 'error',
@@ -324,11 +324,20 @@ module.exports = {
 			'always',
 		],
 		'jsonc/object-property-newline': 'error',
-		'node/no-extraneous-import': 'error',
-		'node/no-extraneous-require': 'error',
-		'node/no-missing-import': 'error',
-		'node/no-missing-require': 'error',
-		'node/no-deprecated-api': [
+		'n/no-extraneous-import': 'error',
+		'n/no-extraneous-require': 'error',
+		'n/no-missing-import': [ 'error', {
+			typescriptExtensionMap: [
+				[ '', '.js' ],
+				[ '.ts', '.js' ],
+				[ '.d.ts', '.js' ],
+				[ '.cts', '.cjs' ],
+				[ '.mts', '.mjs' ],
+				[ '.tsx', '.js' ],
+			],
+		}],
+		'n/no-missing-require': 'error',
+		'n/no-deprecated-api': [
 			'warn',
 		],
 		'promise/catch-or-return': 'error',
