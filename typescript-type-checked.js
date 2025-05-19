@@ -12,8 +12,13 @@ module.exports = defineConfig([
 		files: [ '**/*.ts' ],
 
 		extends: [
-			ts.configs.recommended,
+			ts.configs.recommendedTypeChecked,
 			typescriptBase,
 		],
+
+		rules: {
+			'@typescript-eslint/dot-notation': 'error',
+			'@typescript-eslint/require-await': 'off',
+		},
 	},
 ]);

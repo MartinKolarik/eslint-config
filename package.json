@@ -2,7 +2,7 @@
 	"name": "@martin-kolarik/eslint-config",
 	"description": "Shared eslint config",
 	"version": "7.3.2",
-	"main": "./.eslintrc.js",
+	"main": "./index.js",
 	"github": "https://github.com/MartinKolarik/eslint-config/",
 	"author": {
 		"name": "Martin Kolárik",
@@ -17,20 +17,26 @@
 	"bugs": {
 		"url": "https://github.com/MartinKolarik/eslint-config/issues"
 	},
+	"dependencies": {
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.27.0",
+		"globals": "^16.1.0"
+	},
 	"peerDependencies": {
-		"eslint": "^8.57.0",
-		"eslint-plugin-chai-expect": "^3.0.0",
-		"eslint-plugin-jsonc": "^2.15.1",
-		"eslint-plugin-n": "^16.6.2",
-		"eslint-plugin-prefer-let": "^3.0.1",
-		"eslint-plugin-promise": "^6.1.1"
+		"eslint": "^9.27.0",
+		"eslint-plugin-chai-expect": "^3.1.0",
+		"eslint-plugin-jsonc": "^2.20.1",
+		"eslint-plugin-n": "^17.18.0",
+		"eslint-plugin-prefer-let": "^4.0.0",
+		"eslint-plugin-promise": "^7.2.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.57.0",
-		"eslint-plugin-chai-expect": "^3.0.0",
-		"eslint-plugin-jsonc": "^2.15.1",
-		"eslint-plugin-n": "^16.6.2",
-		"eslint-plugin-prefer-let": "^3.0.1",
-		"eslint-plugin-promise": "^6.1.1"
+		"eslint": "^9.27.0",
+		"eslint-plugin-chai-expect": "^3.1.0",
+		"eslint-plugin-jsonc": "^2.20.1",
+		"eslint-plugin-n": "^17.18.0",
+		"eslint-plugin-prefer-let": "^4.0.0",
+		"eslint-plugin-promise": "^7.2.1",
+		"typescript-eslint": "^8.32.1"
 	}
 }
