@@ -17,8 +17,14 @@ module.exports = defineConfig([
 		],
 
 		rules: {
-			'@typescript-eslint/dot-notation': 'error',
 			'@typescript-eslint/require-await': 'off',
+			// Stylistic rules.
+			'@typescript-eslint/dot-notation': 'error',
+			'@typescript-eslint/non-nullable-type-assertion-style': 'error',
+			'@typescript-eslint/prefer-find': 'error',
+			'@typescript-eslint/prefer-includes': 'error',
+			'@typescript-eslint/prefer-regexp-exec': 'error',
+			'@typescript-eslint/prefer-string-starts-ends-with': 'error',
 		},
 	},
 ]);
