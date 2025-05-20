@@ -1,4 +1,5 @@
 const { defineConfig, globalIgnores } = require('eslint/config');
+const stylistic = require('@stylistic/eslint-plugin');
 const js = require('@eslint/js');
 const n = require('eslint-plugin-n');
 const jsonc = require('eslint-plugin-jsonc');
@@ -27,10 +28,11 @@ module.exports = defineConfig([
 		},
 
 		plugins: {
-			js,
 			n,
+			js,
 			jsonc,
 			promise,
+			'@stylistic': stylistic,
 			'prefer-let': preferLet,
 		},
 
@@ -42,13 +44,6 @@ module.exports = defineConfig([
 
 			'no-empty': [ 'error', {
 				allowEmptyCatch: true,
-			}],
-
-			'no-extra-parens': [ 'error', 'all', {
-				conditionalAssign: false,
-				returnAssign: false,
-				nestedBinaryExpressions: false,
-				enforceForArrowConditionals: false,
 			}],
 
 			'require-atomic-updates': 'off',
@@ -71,9 +66,7 @@ module.exports = defineConfig([
 			}],
 
 			'no-inner-declarations': 'error',
-			'no-multi-spaces': 'error',
 			'no-multi-str': 'error',
-			'no-mixed-spaces-and-tabs': [ 'error', 'smart-tabs' ],
 			'no-new-wrappers': 'error',
 			'no-octal-escape': 'error',
 			'no-return-await': 'error',
@@ -93,79 +86,142 @@ module.exports = defineConfig([
 			'prefer-promise-reject-errors': 'error',
 			'yoda': 'error',
 
-			'array-bracket-spacing': [ 'error', 'always', {
-				objectsInArrays: false,
-			}],
-
-			'block-spacing': 'error',
-
-			'brace-style': [ 'error', '1tbs', {
-				allowSingleLine: true,
-			}],
-
 			'camelcase': [ 'error', {
 				properties: 'never',
 				ignoreDestructuring: true,
-			}],
-
-			'comma-dangle': [ 'error', {
-				arrays: 'always-multiline',
-				objects: 'always-multiline',
-				imports: 'always-multiline',
-				exports: 'always-multiline',
-				functions: 'always-multiline',
-			}],
-
-			'comma-spacing': 'error',
-			'comma-style': 'error',
-			'computed-property-spacing': 'error',
-			'eol-last': 'error',
-			'func-call-spacing': 'error',
-			'function-paren-newline': 'error',
-			'implicit-arrow-linebreak': 'error',
-
-			'indent': [ 'error', 'tab', {
-				SwitchCase: 1,
-			}],
-
-			'key-spacing': 'error',
-			'keyword-spacing': 'error',
-			'linebreak-style': [ 'error', 'unix' ],
-
-			'lines-around-comment': [ 'error', {
-				allowBlockStart: true,
-				allowObjectStart: true,
-				allowArrayStart: true,
-				allowClassStart: true,
-			}],
-
-			'lines-between-class-members': [ 'error', 'always', {
-				exceptAfterSingleLine: true,
 			}],
 
 			'new-cap': [ 'error', {
 				capIsNew: false,
 			}],
 
-			'new-parens': 'error',
 			'no-array-constructor': 'error',
 			'no-bitwise': 'error',
+			'no-object-constructor': 'error',
+			'no-unneeded-ternary': 'error',
+			'operator-assignment': 'error',
+			'unicode-bom': 'error',
+			'no-duplicate-imports': 'error',
 
-			'no-mixed-operators': [ 'error', {
+			'no-empty-pattern': [ 'error', {
+				allowObjectPatternsAsParameters: true,
+			}],
+
+			'no-useless-computed-key': 'error',
+			'no-useless-constructor': 'error',
+			'no-useless-rename': 'error',
+			'no-var': 'error',
+			'no-unused-private-class-members': 'error',
+
+			'no-unused-vars': [ 'error', {
+				ignoreRestSiblings: true,
+			}],
+
+			'object-shorthand': 'error',
+			'prefer-arrow-callback': 'error',
+			'prefer-numeric-literals': 'error',
+			'prefer-object-has-own': 'error',
+			'prefer-rest-params': 'error',
+			'prefer-spread': 'error',
+
+			// Stylistic
+			'@stylistic/array-bracket-newline': [ 'error', 'consistent' ],
+
+			'@stylistic/array-bracket-spacing': [ 'error', 'always', {
+				objectsInArrays: false,
+			}],
+
+			'@stylistic/array-element-newline': [ 'error', {
+				consistent: true,
+				multiline: false,
+			}],
+
+			'@stylistic/arrow-parens': [ 'error', 'as-needed', {
+				requireForBlockBody: true,
+			}],
+
+			'@stylistic/arrow-spacing': 'error',
+			'@stylistic/block-spacing': 'error',
+
+			'@stylistic/brace-style': [ 'error', '1tbs', {
+				allowSingleLine: true,
+			}],
+
+			'@stylistic/comma-dangle': [ 'error', 'always-multiline' ],
+			'@stylistic/comma-spacing': 'error',
+			'@stylistic/comma-style': 'error',
+			'@stylistic/computed-property-spacing': 'error',
+
+			'@stylistic/curly-newline': [ 'error', {
+				multiline: true,
+				consistent: true,
+			}],
+
+			'@stylistic/dot-location': [ 'error', 'property' ],
+			'@stylistic/eol-last': 'error',
+			'@stylistic/func-call-spacing': 'error',
+			'@stylistic/function-call-argument-newline': [ 'error', 'consistent' ],
+			'@stylistic/function-call-spacing': 'error',
+			'@stylistic/function-paren-newline': 'error',
+			'@stylistic/generator-star-spacing': 'error',
+			'@stylistic/implicit-arrow-linebreak': 'error',
+
+			'@stylistic/indent': [ 'error', 'tab', {
+				SwitchCase: 1,
+			}],
+
+			'@stylistic/key-spacing': 'error',
+			'@stylistic/keyword-spacing': 'error',
+			'@stylistic/linebreak-style': [ 'error', 'unix' ],
+
+			'@stylistic/lines-around-comment': [ 'error', {
+				allowBlockStart: true,
+				allowObjectStart: true,
+				allowArrayStart: true,
+				allowClassStart: true,
+			}],
+
+			'@stylistic/lines-between-class-members': [ 'error', 'always', {
+				exceptAfterSingleLine: true,
+			}],
+
+			'@stylistic/member-delimiter-style': 'error',
+			'@stylistic/new-parens': 'error',
+
+			'@stylistic/no-extra-parens': [ 'error', 'all', {
+				conditionalAssign: false,
+				returnAssign: false,
+				nestedBinaryExpressions: false,
+				enforceForArrowConditionals: false,
+			}],
+
+			'@stylistic/no-extra-semi': 'error',
+
+			'@stylistic/no-mixed-operators': [ 'error', {
 				groups: [ [ '%', '**' ], [ '&', '|', '^', '~', '<<', '>>', '>>>' ], [ '&&', '||' ] ],
 			}],
 
-			'no-multiple-empty-lines': 'error',
-			'no-new-object': 'error',
-			'no-trailing-spaces': 'error',
-			'no-unneeded-ternary': 'error',
-			'no-whitespace-before-property': 'error',
-			'object-curly-spacing': [ 'error', 'always' ],
-			'operator-assignment': 'error',
-			'operator-linebreak': [ 'error', 'before' ],
-			'padded-blocks': [ 'error', 'never' ],
+			'@stylistic/no-mixed-spaces-and-tabs': [ 'error', 'smart-tabs' ],
+			'@stylistic/no-multi-spaces': 'error',
+			'@stylistic/no-multiple-empty-lines': 'error',
+			'@stylistic/no-trailing-spaces': 'error',
+			'@stylistic/no-whitespace-before-property': 'error',
 
-			'padding-line-between-statements': [ 'error', {
+			'@stylistic/object-curly-newline': [ 'error', {
+				consistent: true,
+				multiline: true,
+			}],
+
+			'@stylistic/object-curly-spacing': [ 'error', 'always' ],
+
+			'@stylistic/object-property-newline': [ 'error', {
+				allowAllPropertiesOnSameLine: true,
+			}],
+
+			'@stylistic/operator-linebreak': [ 'error', 'before' ],
+			'@stylistic/padded-blocks': [ 'error', 'never' ],
+
+			'@stylistic/padding-line-between-statements': [ 'error', {
 				blankLine: 'always',
 				prev: [ 'block-like' ],
 				next: '*',
@@ -195,63 +251,36 @@ module.exports = defineConfig([
 				next: [ 'const', 'let', 'return' ],
 			}],
 
-			'quote-props': [ 'error', 'consistent-as-needed' ],
+			'@stylistic/quote-props': [ 'error', 'consistent-as-needed' ],
 
-			'quotes': [ 'error', 'single', {
+			'@stylistic/quotes': [ 'error', 'single', {
 				allowTemplateLiterals: true,
 			}],
 
-			'semi': [ 'error', 'always' ],
-			'semi-spacing': 'error',
-			'semi-style': 'error',
-			'space-before-blocks': 'error',
-			'space-before-function-paren': 'error',
-			'space-in-parens': 'error',
-			'space-infix-ops': 'error',
+			'@stylistic/rest-spread-spacing': 'error',
+			'@stylistic/semi': [ 'error', 'always' ],
+			'@stylistic/semi-spacing': 'error',
+			'@stylistic/semi-style': 'error',
+			'@stylistic/space-before-blocks': 'error',
+			'@stylistic/space-before-function-paren': 'error',
+			'@stylistic/space-in-parens': 'error',
+			'@stylistic/space-infix-ops': 'error',
 
-			'space-unary-ops': [ 'error', {
+			'@stylistic/space-unary-ops': [ 'error', {
 				words: true,
 				nonwords: false,
 			}],
 
-			'spaced-comment': 'error',
-			'switch-colon-spacing': 'error',
-			'template-tag-spacing': 'error',
-			'unicode-bom': 'error',
+			'@stylistic/spaced-comment': 'error',
+			'@stylistic/switch-colon-spacing': 'error',
+			'@stylistic/template-curly-spacing': 'error',
+			'@stylistic/template-tag-spacing': 'error',
+			'@stylistic/type-annotation-spacing': 'error',
+			'@stylistic/type-generic-spacing': 'error',
+			'@stylistic/type-named-tuple-spacing': 'error',
+			'@stylistic/yield-star-spacing': 'error',
 
-			'arrow-parens': [ 'error', 'as-needed', {
-				requireForBlockBody: true,
-			}],
-
-			'arrow-spacing': 'error',
-			'generator-star-spacing': 'error',
-			'no-duplicate-imports': 'error',
-
-			'no-extra-semi': 'error',
-			'no-empty-pattern': [ 'error', {
-				allowObjectPatternsAsParameters: true,
-			}],
-
-			'no-useless-computed-key': 'error',
-			'no-useless-constructor': 'error',
-			'no-useless-rename': 'error',
-			'no-var': 'error',
-			'no-unused-private-class-members': 'error',
-
-			'no-unused-vars': [ 'error', {
-				ignoreRestSiblings: true,
-			}],
-
-			'object-shorthand': 'error',
-			'prefer-arrow-callback': 'error',
-			'prefer-numeric-literals': 'error',
-			'prefer-object-has-own': 'error',
-			'prefer-rest-params': 'error',
-			'prefer-spread': 'error',
-			'rest-spread-spacing': 'error',
-			'template-curly-spacing': 'error',
-			'yield-star-spacing': 'error',
-
+			// jsonc
 			'jsonc/array-bracket-newline': [ 'error', {
 				minItems: 1,
 			}],
@@ -271,8 +300,9 @@ module.exports = defineConfig([
 			'jsonc/object-curly-newline': 'error',
 			'jsonc/object-curly-spacing': [ 'error', 'always' ],
 			'jsonc/object-property-newline': 'error',
-			'n/no-extraneous-import': [ 'error', {
-			}],
+
+			// n
+			'n/no-extraneous-import': [ 'error', {}],
 			'n/no-extraneous-require': 'error',
 
 			'n/no-missing-import': [ 'error', {
@@ -289,10 +319,14 @@ module.exports = defineConfig([
 
 			'n/no-missing-require': 'error',
 			'n/no-deprecated-api': [ 'warn' ],
+
+			// promise
 			'promise/catch-or-return': 'error',
 			'promise/no-return-wrap': 'error',
 			'promise/param-names': 'error',
 			'promise/valid-params': 'error',
+
+			// prefer-let
 			'prefer-let/prefer-let': 'error',
 		},
 	},

@@ -18,6 +18,7 @@ module.exports = defineConfig([
 
 		rules: {
 			'@typescript-eslint/require-await': 'off',
+
 			// Stylistic rules.
 			'@typescript-eslint/dot-notation': 'error',
 			'@typescript-eslint/non-nullable-type-assertion-style': 'error',
