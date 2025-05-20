@@ -1,4 +1,4 @@
-const { defineConfig, globalIgnores } = require('eslint/config');
+const { defineConfig } = require('eslint/config');
 const stylistic = require('@stylistic/eslint-plugin');
 const js = require('@eslint/js');
 const n = require('eslint-plugin-n');
@@ -9,8 +9,9 @@ const chaiExpect = require('eslint-plugin-chai-expect');
 const globals = require('globals');
 
 module.exports = defineConfig([
-	globalIgnores([ '**/.*', '!**/.*.cjs', '!**/.*.js', '!**/.*.json' ]),
 	{
+		name: '@martin-kolarik/javascript/base',
+
 		extends: [
 			'js/recommended',
 			'jsonc/flat/recommended-with-json',
@@ -331,6 +332,12 @@ module.exports = defineConfig([
 		},
 	},
 	{
+		name: '@martin-kolarik/javascript/ignores',
+		ignores: [ '**/.*', '!**/.*.cjs', '!**/.*.js', '!**/.*.json' ],
+	},
+	{
+		name: '@martin-kolarik/javascript/tests',
+
 		files: [ 'test/**' ],
 
 		plugins: {

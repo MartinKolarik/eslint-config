@@ -9,6 +9,8 @@ module.exports = defineConfig([
 	javascript,
 	typescriptBaseJs,
 	{
+		name: '@martin-kolarik/typescript',
+
 		files: [ '**/*.ts' ],
 
 		extends: [

@@ -1,8 +1,9 @@
-const { defineConfig, globalIgnores } = require('eslint/config');
+const { defineConfig } = require('eslint/config');
 
 module.exports = defineConfig([
-	globalIgnores([ '!**/.*.ts' ]),
 	{
+		name: '@martin-kolarik/typescript/base-js-overrides',
+
 		rules: {
 			'prefer-let/prefer-let': 'off',
 		},

@@ -2,6 +2,8 @@ const { defineConfig } = require('eslint/config');
 
 module.exports = defineConfig([
 	{
+		name: '@martin-kolarik/typescript/base',
+
 		rules: {
 			// Additional TS rules.
 			'no-useless-constructor': 'off',
@@ -24,10 +26,15 @@ module.exports = defineConfig([
 			// Stylistic rules.
 			'@typescript-eslint/consistent-type-assertions': 'error',
 			'@typescript-eslint/no-confusing-non-null-assertion': 'error',
-
 		},
 	},
 	{
+		name: '@martin-kolarik/typescript/ignores',
+		ignores: [ '!**/.*.ts' ],
+	},
+	{
+		name: '@martin-kolarik/typescript/tests',
+
 		files: [ 'test/**' ],
 
 		rules: {
