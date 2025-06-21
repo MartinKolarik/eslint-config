@@ -29,10 +29,6 @@ module.exports = defineConfig([
 		},
 	},
 	{
-		name: '@martin-kolarik/typescript/ignores',
-		ignores: [ '!**/.*.ts' ],
-	},
-	{
 		name: '@martin-kolarik/typescript/tests',
 
 		files: [ 'test/**' ],
