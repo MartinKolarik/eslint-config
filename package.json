@@ -1,7 +1,7 @@
 {
 	"name": "@martin-kolarik/eslint-config",
 	"description": "Shared eslint config",
-	"version": "8.0.1",
+	"version": "8.0.2",
 	"main": "./index.js",
 	"github": "https://github.com/MartinKolarik/eslint-config/",
 	"author": {
