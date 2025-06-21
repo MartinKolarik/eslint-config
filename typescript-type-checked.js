@@ -5,13 +5,13 @@ const javascript = require('./javascript');
 const typescriptBase = require('./typescript-base');
 const typescriptBaseJs = require('./typescript-base-js');
 
-module.exports = defineConfig([
+const forFiles = (files = [ '**/*.ts' ]) => defineConfig([
 	javascript,
 	typescriptBaseJs,
 	{
 		name: '@martin-kolarik/typescript-type-checked',
 
-		files: [ '**/*.ts' ],
+		files,
 
 		extends: [
 			ts.configs.recommendedTypeChecked,
@@ -31,3 +31,6 @@ module.exports = defineConfig([
 		},
 	},
 ]);
+
+module.exports = forFiles();
+module.exports.forFiles = forFiles;
