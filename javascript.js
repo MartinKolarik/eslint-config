@@ -48,6 +48,7 @@ module.exports = defineConfig([
 			}],
 
 			'require-atomic-updates': 'off',
+			'require-yield': 'off',
 			'array-callback-return': 'error',
 			'curly': 'error',
 			'dot-notation': 'error',
