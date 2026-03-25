@@ -127,7 +127,10 @@ module.exports = defineConfig([
 			'prefer-spread': 'error',
 
 			// Stylistic
-			'@stylistic/array-bracket-newline': [ 'error', 'consistent' ],
+			'@stylistic/array-bracket-newline': [ 'error', {
+				consistent: true,
+				multiline: true,
+			}],
 
 			'@stylistic/array-bracket-spacing': [ 'error', 'always', {
 				objectsInArrays: false,
