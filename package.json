@@ -18,21 +18,21 @@
 		"url": "https://github.com/MartinKolarik/eslint-config/issues"
 	},
 	"dependencies": {
-		"@eslint/eslintrc": "^3.3.1",
-		"@eslint/js": "^9.29.0",
+		"@eslint/eslintrc": "^3.3.5",
+		"@eslint/js": "^9.39.4",
 		"@stylistic/eslint-plugin": "^4.4.1",
 		"eslint-plugin-chai-expect": "^3.1.0",
-		"eslint-plugin-jsonc": "^2.20.1",
-		"eslint-plugin-n": "^17.20.0",
-		"eslint-plugin-prefer-let": "^4.0.0",
+		"eslint-plugin-jsonc": "^2.21.1",
+		"eslint-plugin-n": "^17.24.0",
+		"eslint-plugin-prefer-let": "^4.2.0",
 		"eslint-plugin-promise": "^7.2.1",
-		"globals": "^16.2.0",
-		"typescript-eslint": "^8.34.1"
+		"globals": "^16.5.0",
+		"typescript-eslint": "^8.57.2"
 	},
 	"peerDependencies": {
 		"eslint": "^9.29.0"
 	},
 	"devDependencies": {
-		"eslint": "^9.29.0"
+		"eslint": "^9.39.4"
 	}
 }
