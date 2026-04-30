@@ -17,7 +17,7 @@ import { defineConfig } from 'eslint/config';
 import javascript from '@martin-kolarik/eslint-config';
 
 export default defineConfig([
-    javascript,
+    ...javascript,
 ]);
 ```
 
@@ -29,14 +29,12 @@ import typescript from '@martin-kolarik/eslint-config/typescript.js';
 import typescriptTypeChecked from '@martin-kolarik/eslint-config/typescript-type-checked.js';
 
 export default defineConfig([
-    typescript,
+    ...typescript,
     {
         files: [ 'src/**/*.ts' ],
         extends: [ typescriptTypeChecked ],
 
         languageOptions: {
-            sourceType: 'module',
-
             parserOptions: {
                 project: true,
             },

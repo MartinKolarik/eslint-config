@@ -9,13 +9,10 @@ const chaiExpect = require('eslint-plugin-chai-expect');
 const globals = require('globals');
 
 module.exports = defineConfig([
+	js.configs.recommended,
+	...jsonc.configs['flat/recommended-with-json'],
 	{
 		name: '@martin-kolarik/javascript/base',
-
-		extends: [
-			'js/recommended',
-			'jsonc/flat/recommended-with-json',
-		],
 
 		languageOptions: {
 			sourceType: 'module',
@@ -30,8 +27,6 @@ module.exports = defineConfig([
 
 		plugins: {
 			n,
-			js,
-			jsonc,
 			promise,
 			'@stylistic': stylistic,
 			'prefer-let': preferLet,
@@ -127,10 +122,7 @@ module.exports = defineConfig([
 			'prefer-spread': 'error',
 
 			// Stylistic
-			'@stylistic/array-bracket-newline': [ 'error', {
-				consistent: true,
-				multiline: true,
-			}],
+			'@stylistic/array-bracket-newline': [ 'error', 'consistent' ],
 
 			'@stylistic/array-bracket-spacing': [ 'error', 'always', {
 				objectsInArrays: false,
@@ -164,7 +156,6 @@ module.exports = defineConfig([
 
 			'@stylistic/dot-location': [ 'error', 'property' ],
 			'@stylistic/eol-last': 'error',
-			'@stylistic/func-call-spacing': 'error',
 			'@stylistic/function-call-argument-newline': [ 'error', 'consistent' ],
 			'@stylistic/function-call-spacing': 'error',
 			'@stylistic/function-paren-newline': 'error',
@@ -197,7 +188,7 @@ module.exports = defineConfig([
 				conditionalAssign: false,
 				returnAssign: false,
 				nestedBinaryExpressions: false,
-				enforceForArrowConditionals: false,
+				ignoredNodes: [ 'ArrowFunctionExpression[body.type=ConditionalExpression]' ],
 			}],
 
 			'@stylistic/no-extra-semi': 'error',
@@ -259,7 +250,7 @@ module.exports = defineConfig([
 			'@stylistic/quote-props': [ 'error', 'consistent-as-needed' ],
 
 			'@stylistic/quotes': [ 'error', 'single', {
-				allowTemplateLiterals: true,
+				allowTemplateLiterals: 'always',
 			}],
 
 			'@stylistic/rest-spread-spacing': 'error',
