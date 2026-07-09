@@ -152,6 +152,8 @@ module.exports = defineConfig([
 			'@stylistic/curly-newline': [ 'error', {
 				multiline: true,
 				consistent: true,
+				minElements: 1,
+				ArrowFunctionExpression: { multiline: true, consistent: true, minElements: 2 },
 			}],
 
 			'@stylistic/dot-location': [ 'error', 'property' ],
